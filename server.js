@@ -1,6 +1,7 @@
-import express from "express";
-import fetch from "node-fetch";
-import { createHmac, timingSafeEqual } from "crypto";
+// server.js
+const express = require("express");
+const fetch = require("node-fetch");
+const { createHmac, timingSafeEqual } = require("crypto");
 
 const app = express();
 app.use(express.json());
@@ -39,7 +40,7 @@ app.post("/bagibagi", async (req, res) => {
       {
         name: "🔗 Link Donasi",
         value: `[Dukung juga di sini](https://bagibagi.co/donate/${transaction_id})`,
-        inline: false
+        inline: false,
       },
     ],
     footer: { text: "bagibagi.co | Terima kasih atas dukungannya ❤️" },
@@ -64,4 +65,4 @@ app.post("/bagibagi", async (req, res) => {
 
 // Jalankan server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server jalan di port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server jalan di port ${PORT}`));
