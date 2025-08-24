@@ -39,7 +39,7 @@ app.post("/bagibagi", async (req, res) => {
       { name: "📝 Pesan", value: message || "-", inline: false },
       {
         name: "🔗 Link Donasi",
-        value: `[Dukung juga di sini](https://bagibagi.co/donate/${transaction_id})`,
+        value: `[Dukung juga di sini](https://bagibagi.co/gacorin2)`,
         inline: false,
       },
     ],
